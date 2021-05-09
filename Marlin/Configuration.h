@@ -1239,8 +1239,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 510 // Nozzle is at X4 when homed
-#define Y_BED_SIZE 510 // Nozzle is at Y2 when homed
+#define X_BED_SIZE 490 // Nozzle is at X4 when homed
+#define Y_BED_SIZE 490 // Nozzle is at Y2 when homed
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1248,7 +1248,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 510
+#define Z_MAX_POS 500
 
 /**
  * Software Endstops
@@ -1410,7 +1410,7 @@
 /**
  * Auto-leveling needs preheating
  */
-// #define PREHEAT_BEFORE_LEVELING
+#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   // #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     65
@@ -1464,16 +1464,6 @@
   // Set the number of grid points per dimension.
   #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
-
-  // // Set the boundaries for probing (where the probe can reach).
-  // #define LEFT_PROBE_BED_POSITION 50
-  // #define RIGHT_PROBE_BED_POSITION 450
-  // #define FRONT_PROBE_BED_POSITION 50
-  // #define BACK_PROBE_BED_POSITION 450
-
-  // The Z probe minimum outer margin (to validate G29 parameters).
-  #define PROBING_MARGIN 10
-
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
