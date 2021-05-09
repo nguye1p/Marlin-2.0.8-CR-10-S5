@@ -1065,7 +1065,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -44, -14, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1469,14 +1469,15 @@
   #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
-  // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 50
-  #define RIGHT_PROBE_BED_POSITION 450
-  #define FRONT_PROBE_BED_POSITION 50
-  #define BACK_PROBE_BED_POSITION 450
+  // // Set the boundaries for probing (where the probe can reach).
+  // #define LEFT_PROBE_BED_POSITION 50
+  // #define RIGHT_PROBE_BED_POSITION 450
+  // #define FRONT_PROBE_BED_POSITION 50
+  // #define BACK_PROBE_BED_POSITION 450
 
   // The Z probe minimum outer margin (to validate G29 parameters).
-  #define MIN_PROBE_EDGE 10
+  #define PROBING_MARGIN 10
+
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
